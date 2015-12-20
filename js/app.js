@@ -11,7 +11,6 @@ var Enemy = function(startX, startY) {
     this.y = startY;
     this.speed = Math.floor((Math.random() * 100) + 200); // speed  between 100 and 300
 };
-};
 
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
