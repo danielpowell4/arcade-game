@@ -49,6 +49,23 @@ player.prototype.render = function() {
 // Change the position of the player based on the input key
 player.update.handleInput = function(key) {
 
+  switch (key) {
+    case 'left':
+      //move left
+      break;
+    case 'up':
+      // move Up
+      break;
+    case 'right':
+      // move Right
+      break;
+    case 'down':
+      //move Down
+      break;
+    default:
+
+  }
+
 }
 
 // Now instantiate your objects.
