@@ -36,6 +36,13 @@ var player = function(startX, startY) {
     this.y = 5 * lenY;
 };
 
+player.prototype.update = function(dt) {
+  
+    this.x = this.x + (this.speed * dt); // will need to add in an if statement to handle overruns of the canvas
+
+};
+
+
 
 
 // Now instantiate your objects.
