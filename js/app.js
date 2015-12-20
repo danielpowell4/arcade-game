@@ -34,7 +34,6 @@ var player = function(startX, startY) {
     this.sprite = 'images/char-cat-girl.png';
     this.x = 2 * lenX;
     this.y = 5 * lenY;
-    this.speed = Math.floor((Math.random() * 100) + 200); // speed  between 100 and 300
 };
 
 
