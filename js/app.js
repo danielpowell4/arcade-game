@@ -30,8 +30,8 @@ Enemy.prototype.render = function() {
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
-var Player = function(startX, startY) {
-    this.sprite = 'images/enemy-bug.png';
+var player = function(startX, startY) {
+    this.sprite = 'images/char-cat-girl.png';
     this.x = startX;
     this.y = startY;
     this.speed = Math.floor((Math.random() * 100) + 200); // speed  between 100 and 300
