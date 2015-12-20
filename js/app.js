@@ -1,3 +1,8 @@
+//Globally needed variables
+
+var lenX = 101; //width of column
+var lenY = 83; //height of row
+
 // Enemies the player must avoid
 var Enemy = function(startX, startY) {
     this.sprite = 'images/enemy-bug.png';
