@@ -18,6 +18,7 @@ Enemy.prototype.update = function(dt) {
     // which will ensure the game runs at the same speed for
     // all computers.
 
+    this.x = this.x + (this.speed * dt); // will need to add in an if statement to handle overruns of the canvas
 
 };
 
