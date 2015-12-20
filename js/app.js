@@ -49,9 +49,10 @@ player.prototype.render = function() {
 // Change the position of the player based on the input key
 player.update.handleInput = function(key) {
 
-  switch (key) {
+  switch (key) { // will need to add in if Statements to handle min's and max's
     case 'left':
       //move left
+      var leftPos = this.x - lenX; // STOPPED ON THIS LINE
       break;
     case 'up':
       // move Up
