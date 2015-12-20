@@ -36,10 +36,9 @@ var player = function(startX, startY) {
     this.y = 5 * lenY;
 };
 
-player.prototype.update = function(dt) {
-  
-    this.x = this.x + (this.speed * dt); // will need to add in an if statement to handle overruns of the canvas
 
+player.prototype.update = function(dt) {
+  // Will need to be able to handle a reset after y is <= 0, also scoring if desired
 };
 
 
