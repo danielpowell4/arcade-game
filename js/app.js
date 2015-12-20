@@ -46,6 +46,10 @@ player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+// Change the position of the player based on the input key
+player.update.handleInput = function(key) {
+
+}
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
