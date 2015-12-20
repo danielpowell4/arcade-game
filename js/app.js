@@ -41,7 +41,10 @@ player.prototype.update = function(dt) {
   // Will need to be able to handle a reset after y is <= 0, also scoring if desired
 };
 
-
+// Draw the player on the screen, required method for game
+player.prototype.render = function() {
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+};
 
 
 // Now instantiate your objects.
