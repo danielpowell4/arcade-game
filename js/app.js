@@ -32,10 +32,12 @@ Enemy.prototype.render = function() {
 // a handleInput() method.
 var player = function(startX, startY) {
     this.sprite = 'images/char-cat-girl.png';
-    this.x = startX;
-    this.y = startY;
+    this.x = 2 * lenX;
+    this.y = 5 * lenY;
     this.speed = Math.floor((Math.random() * 100) + 200); // speed  between 100 and 300
 };
+
+
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
