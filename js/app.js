@@ -50,21 +50,31 @@ player.prototype.render = function() {
 player.update.handleInput = function(key) {
   var stepX = 101;
   var stepY = 83;
-  switch (this.action) { // will need to add in if Statements to handle min's and max's
-    case 'left':
-      var leftPos = this.x - lenX; // move left
-      break;
+  switch (this.action) {
     case 'up':
       if (this.y > canvas.boundaries.top) {
         this.y -= stepY;
       }
       break;
+
     case 'right':
-      var rightPos = this.x + lenX; // move right
+      if (this.x < canvas.boundaries.right) {
+        this.x += stepX;
+      }
       break;
+
     case 'down':
-      var downPos = this.y + lenY; // move down
+      if (this.y < canvas.boundaries.bottom) {
+        this.y += stepY;
+      }
       break;
+
+    case 'left':
+      if (this.x > canvas.boundaries.left) {
+        this.x -= stepX;
+      }
+      break;
+
     default:
       console.log("that's a weird button to press");
 
