@@ -51,17 +51,16 @@ player.update.handleInput = function(key) {
 
   switch (key) { // will need to add in if Statements to handle min's and max's
     case 'left':
-      //move left
-      var leftPos = this.x - lenX; // STOPPED ON THIS LINE
+      var leftPos = this.x - lenX; // move left
       break;
     case 'up':
-      // move Up
+      var upPos = this.y - lenY; // move up
       break;
     case 'right':
-      // move Right
+      var rightPos = this.x + lenX; // move right
       break;
     case 'down':
-      //move Down
+      var downPos = this.y + lenY; // move down
       break;
     default:
 
