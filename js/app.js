@@ -36,11 +36,6 @@ var Player = function(startX, startY) {
     this.y = 5 * lenY;
 };
 
-
-Player.prototype.update = function(dt) {
-  // Will need to be able to handle a reset after y is <= 0, also scoring if desired
-};
-
 // Draw the player on the screen, required method for game
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
@@ -81,6 +76,8 @@ Player.update.handleInput = function(key) {
   }
 
 };
+
+// Reset the Player
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
