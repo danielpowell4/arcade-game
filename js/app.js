@@ -71,6 +71,9 @@ Player.prototype.update = function() {
       break;
   }
 
+  // reset action
+  this.action = null;
+
 };
 
 // Get that Input feeding into update
