@@ -30,24 +30,24 @@ Enemy.prototype.render = function() {
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
-var player = function(startX, startY) {
+var Player = function(startX, startY) {
     this.sprite = 'images/char-cat-girl.png';
     this.x = 2 * lenX;
     this.y = 5 * lenY;
 };
 
 
-player.prototype.update = function(dt) {
+Player.prototype.update = function(dt) {
   // Will need to be able to handle a reset after y is <= 0, also scoring if desired
 };
 
 // Draw the player on the screen, required method for game
-player.prototype.render = function() {
+Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
 // Change the position of the player based on the input key
-player.update.handleInput = function(key) {
+Player.update.handleInput = function(key) {
   var stepX = 101;
   var stepY = 83;
   switch (this.action) {
@@ -100,5 +100,5 @@ document.addEventListener('keyup', function(e) {
         40: 'down'
     };
 
-    player.handleInput(allowedKeys[e.keyCode]);
+    Player.handleInput(allowedKeys[e.keyCode]);
 });
