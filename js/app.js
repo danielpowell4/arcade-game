@@ -42,7 +42,7 @@ Player.prototype.render = function() {
 };
 
 // Change the position of the player based on the input key
-Player.update.handleInput = function(key) {
+Player.prototype.update = function(key) {
   var stepX = 101;
   var stepY = 83;
   switch (this.action) {
