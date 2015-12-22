@@ -1,8 +1,5 @@
 //Globally needed variables
 
-var lenX = 101; // width of column
-var lenY = 83; // height of row
-
 // Enemies the player must avoid
 var Enemy = function(startX, startY) {
     this.sprite = 'images/enemy-bug.png';
@@ -32,8 +29,8 @@ Enemy.prototype.render = function() {
 // a handleInput() method.
 var Player = function(startX, startY) {
     this.sprite = 'images/char-cat-girl.png';
-    this.x = 2 * lenX;
-    this.y = 5 * lenY;
+    this.x = 202;
+    this.y = 415;
 };
 
 // Draw the player on the screen, required method for game
@@ -85,8 +82,8 @@ Player.prototype.handleInput = function(e) {
 // Reset the Player
 
 Player.prototype.reset = function() {
-  this.x = 200; // correct point?
-  this.y = 400; // correct point?
+  this.x = 202;
+  this.y = 415; 
 };
 
 // Now instantiate your objects.
