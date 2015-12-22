@@ -74,6 +74,7 @@ Player.prototype.update = function() {
   // reset action
   this.action = null;
 
+  // reset if on water should go here
 };
 
 // Get that Input feeding into update
