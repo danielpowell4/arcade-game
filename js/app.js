@@ -48,13 +48,16 @@ player.prototype.render = function() {
 
 // Change the position of the player based on the input key
 player.update.handleInput = function(key) {
-
-  switch (key) { // will need to add in if Statements to handle min's and max's
+  var stepX = 101;
+  var stepY = 83;
+  switch (this.action) { // will need to add in if Statements to handle min's and max's
     case 'left':
       var leftPos = this.x - lenX; // move left
       break;
     case 'up':
-      var upPos = this.y - lenY; // move up
+      if (this.y > canvas.boundaries.top) {
+        this.y -= stepY;
+      }
       break;
     case 'right':
       var rightPos = this.x + lenX; // move right
@@ -74,6 +77,8 @@ player.update.handleInput = function(key) {
 // Place the player object in a variable called player
 
 var allEnemies = [];
+
+
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
