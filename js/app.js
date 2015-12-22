@@ -107,5 +107,5 @@ document.addEventListener('keyup', function(e) {
         40: 'down'
     };
 
-    Player.handleInput(allowedKeys[e.keyCode]);
+    player.handleInput(allowedKeys[e.keyCode]);
 });
