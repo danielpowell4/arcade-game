@@ -74,7 +74,7 @@ Player.prototype.update = function() {
   // reset action
   this.action = null;
 
-  // reset if on water should go here
+  // reset if on water should go
 };
 
 // Get that Input feeding into update
@@ -83,6 +83,11 @@ Player.prototype.handleInput = function(e) {
 };
 
 // Reset the Player
+
+Player.prototype.reset = function() {
+  this.x = 200; // correct point?
+  this.y = 400; // correct point?
+};
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
