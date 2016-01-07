@@ -85,6 +85,9 @@ Player.prototype.update = function(keyCode) {
   this.action = null;
 
   // reset if on water should go
+  if (this.y < 50) {
+    this.reset();
+  }
 };
 
 // Get that handleInput method
