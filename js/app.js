@@ -41,7 +41,7 @@ Player.prototype.render = function () {
 
 
 // Change the position of the player based on the input key
-Player.prototype.update = function() {
+Player.prototype.update = function(keyCode) {
   var stepX = 101;
   var stepY = 83;
   switch (this.action) {
