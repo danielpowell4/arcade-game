@@ -15,13 +15,23 @@ Enemy.prototype.update = function(dt) {
     // which will ensure the game runs at the same speed for
     // all computers.
 
-    this.x = this.x + (this.speed * dt); // will need to add in an if statement to handle overruns of the canvas
+    this.x = this.x + (this.speed * dt);
+
+    if this.x > 400 {
+      this.reset();
+    };
 
 };
 
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+};
+
+Enemy.prototype.reset = function () {
+  this.x = 0;
+  this.y = Math.floor(Math.random() * 400);
+  this.speed = Math.floor((Math.random() * 100) + 200);
 };
 
 // Now write your own player class
@@ -96,7 +106,7 @@ var allEnemies = [];
 
 for (i = 0; i < 6; i++) {
   var startX = 0;
-  var startY = Math.floor((Math.random() * 400))
+  var startY = Math.floor(Math.random() * 400)
   allEnemies.push(new Enemy(startX, startY));
 }
 
