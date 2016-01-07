@@ -45,36 +45,27 @@ Player.prototype.update = function(keyCode) {
   var stepX = 101;
   var stepY = 83;
 
-  var canvas = {
-    "boundaries" = {
-      "top" : 0;
-      "bottom" : 400;
-      "right" : 400;
-      "left" : 0;
-    }
-  };
-
   switch (this.action) {
     case 'up':
-      if (this.y > canvas.boundaries.top) {
+      if (this.y > 0) {
         this.y -= stepY;
       }
       break;
 
     case 'right':
-      if (this.x < canvas.boundaries.right) {
+      if (this.x < 400) {
         this.x += stepX;
       }
       break;
 
     case 'down':
-      if (this.y < canvas.boundaries.bottom) {
+      if (this.y < 400) {
         this.y += stepY;
       }
       break;
 
     case 'left':
-      if (this.x > canvas.boundaries.left) {
+      if (this.x > 0) {
         this.x -= stepX;
       }
       break;
