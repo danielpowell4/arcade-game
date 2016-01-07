@@ -17,7 +17,7 @@ Enemy.prototype.update = function(dt) {
 
     this.x = this.x + (this.speed * dt);
 
-    if this.x > 400 {
+    if (this.x > 400) {
       this.reset();
     };
 
