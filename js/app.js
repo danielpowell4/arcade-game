@@ -17,7 +17,7 @@ Enemy.prototype.update = function(dt) {
 
     this.x = this.x + (this.speed * dt);
 
-    if (this.x > 400) {
+    if (this.x > 530) {
       this.reset();
     };
 
@@ -29,7 +29,7 @@ Enemy.prototype.render = function() {
 };
 
 Enemy.prototype.reset = function () {
-  this.x = 0;
+  this.x = -101;
   this.y = Math.floor(Math.random() * 400);
   this.speed = Math.floor((Math.random() * 100) + 200);
 };
@@ -105,7 +105,7 @@ Player.prototype.reset = function() {
 var allEnemies = [];
 
 for (i = 0; i < 6; i++) {
-  var startX = 0;
+  var startX = -101;
   var startY = Math.floor(Math.random() * 400)
   allEnemies.push(new Enemy(startX, startY));
 }
