@@ -95,7 +95,9 @@ Player.prototype.reset = function() {
 var allEnemies = [];
 
 for (i = 0; i < 6; i++) {
-  allEnemies.push(new Enemy(i, i));
+  var startX = 0;
+  var startY = Math.floor((Math.random() * 400))
+  allEnemies.push(new Enemy(startX, startY));
 }
 
 // Place the player object in a variable called player
