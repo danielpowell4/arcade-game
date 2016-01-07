@@ -11,12 +11,11 @@ var Engine = (function(global) {
 
     canvas.width = 505;
     canvas.height = 606;
-    canvas.boundaries = {
-      'top': 0,
-      'right': 400,
-      'bottom': 400,
-      'left': 0
-    };
+    canvas.top = 0;
+    canvas.right = 400;
+    canvas.bottom = 400;
+    canvas.left = 0;
+    
     doc.body.appendChild(canvas);
 
     /* This function serves as the kickoff point for the game loop itself

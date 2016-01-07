@@ -46,25 +46,25 @@ Player.prototype.update = function(keyCode) {
   var stepY = 83;
   switch (this.action) {
     case 'up':
-      if (this.y > canvas.boundaries.top) {
+      if (this.y > canvas.top) {
         this.y -= stepY;
       }
       break;
 
     case 'right':
-      if (this.x < canvas.boundaries.right) {
+      if (this.x < canvas.right) {
         this.x += stepX;
       }
       break;
 
     case 'down':
-      if (this.y < canvas.boundaries.bottom) {
+      if (this.y < canvas.bottom) {
         this.y += stepY;
       }
       break;
 
     case 'left':
-      if (this.x > canvas.boundaries.left) {
+      if (this.x > canvas.left) {
         this.x -= stepX;
       }
       break;
