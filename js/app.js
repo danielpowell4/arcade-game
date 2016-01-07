@@ -45,7 +45,7 @@ Player.prototype.update = function(keyCode) {
   var stepX = 101;
   var stepY = 83;
 
-  var canvas {
+  var canvas = {
     "boundaries" = {
       "top" : 0;
       "bottom" : 400;
