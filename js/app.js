@@ -34,9 +34,11 @@ var Player = function(startX, startY) {
 };
 
 // Draw the player on the screen, required method for game
-Player.prototype.render = function() {
-    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+Player.prototype.render = function () {
+  ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
+
+
 
 // Change the position of the player based on the input key
 Player.prototype.update = function() {
@@ -74,7 +76,7 @@ Player.prototype.update = function() {
   // reset if on water should go
 };
 
-// Get that Input feeding into update
+// Get that handleInput method
 Player.prototype.handleInput = function(e) {
   this.action = e;
 };
@@ -83,7 +85,7 @@ Player.prototype.handleInput = function(e) {
 
 Player.prototype.reset = function() {
   this.x = 202;
-  this.y = 415; 
+  this.y = 415;
 };
 
 // Now instantiate your objects.
