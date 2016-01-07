@@ -46,9 +46,9 @@ Player.prototype.update = function(keyCode) {
   var stepY = 83;
   switch (this.action) {
     case 'up':
-      if (this.y > canvas.top) {
+    //  if (this.y > canvas.top) {
         this.y -= stepY;
-      }
+      //}
       break;
 
     case 'right':
