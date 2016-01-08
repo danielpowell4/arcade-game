@@ -5,6 +5,8 @@ var EnemyStartPositionX = -101;
 // Enemies the player must avoid
 var Enemy = function(startX, startY) {
     this.sprite = 'images/enemy-bug.png';
+    this.height = this.sprite.height;
+    this.width = this.sprite.width;
     this.x = startX;
     this.y = startY;
     this.speed = Math.floor((Math.random() * 100) + 200); // speed  between 100 and 300
@@ -32,6 +34,8 @@ Enemy.prototype.reset = function () {
 
 var Player = function(startX, startY) {
     this.sprite = 'images/char-boy.png';
+    this.height = this.sprite.height;
+    this.width = this.sprite.width;
     this.x = 202;
     this.y = 415;
 };
@@ -77,7 +81,20 @@ Player.prototype.update = function(keyCode) {
   if (this.y < 50) {
     this.reset();
   }
+
+  // detect collisions
+
+  for (var enemy in allEnemies) {
+    if (player.x < allEnemies[enemy].x + allEnemies[enemy].width &&
+        player.x + player.width > allEnemies[enemy].x &&
+        player.y < allEnemies[enemy].y + allEnemies[enemy].height &&
+        player.height + player.y > allEnemies[enemy].y
+     )  {
+    this.reset();
+  }
+
 };
+
 
 Player.prototype.handleInput = function(e) {
   this.action = e;
