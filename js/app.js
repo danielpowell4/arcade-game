@@ -101,7 +101,7 @@ Player.prototype.handleInput = function(e) {
 
 Player.prototype.reset = function() {
   this.x = 202;
-  this.y = 415;
+  this.y = 385;
 };
 
 // Release the enemies!!!
