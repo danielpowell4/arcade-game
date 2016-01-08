@@ -91,10 +91,9 @@ Player.prototype.update = function(keyCode) {
         player.height + player.y > allEnemies[enemy].y
      )  {
     this.reset();
+    }
   }
-
 };
-
 
 Player.prototype.handleInput = function(e) {
   this.action = e;
