@@ -48,10 +48,10 @@ Player.prototype.update = function(keyCode) {
     var stepX = 101;
     var stepY = 83;
     this.boundaries = {
-      top = 0;
-      right = 400;
-      bottom = 390;
-      left = 0;
+      "top" : 0,
+      "right" : 400,
+      "bottom" : 390,
+      "left" : 0,
     }
 
     switch (this.action) {
