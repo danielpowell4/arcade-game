@@ -9,7 +9,7 @@ This small game was built in javascript leveraging a simple HTML5 canvas.
 
 Play it here
 ==============================
-(http://danielpowell4.github.io/arcade-game/)
+http://danielpowell4.github.io/arcade-game/
 
 app.js
 ==============================
