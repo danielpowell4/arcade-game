@@ -3,9 +3,9 @@ Princess vs Bug Arcade Game
 
 This game represents the pinnacle of the online gaming experience. A strong woman, alone in the wild, must navigate through a slew of nasty stink bugs on her way to safety at the shore.
 
-Unfortunately, there is no boat. Thus she is driven to bring strands of grass individually to the shore so that she can dry it out and forge a vessel to escape to America, a mystical land perhaps less dangerous.
+Unfortunately, there is no boat. Thus she is driven to bring strands of grass individually to the shore in hopes that she will be able to dry them out, mix some mud and forge a vessel to enable her escape to America, a mystical land--perhaps less dangerous for she, so privileged.
 
-This was small game is built in java script leveraging a simple HTML5 canvas.
+This small game was built in javascript leveraging a simple HTML5 canvas.
 
 app.js
 ==============================
