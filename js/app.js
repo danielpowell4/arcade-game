@@ -36,9 +36,9 @@ var Player = function(startX, startY) {
     this.sprite = 'images/char-boy.png';
     this.height = 76;
     this.width = 70;
-    this.posStartX = 395;
+    this.posStartY = 395;
     this.x = 202;
-    this.y = posStartX;
+    this.y = this.posStartY;
 };
 
 Player.prototype.render = function () {
@@ -102,7 +102,7 @@ Player.prototype.handleInput = function(e) {
 
 Player.prototype.reset = function() {
   this.x = 202;
-  this.y = posStartX;
+  this.y = this.posStartY;
 };
 
 // Release the enemies!!!
