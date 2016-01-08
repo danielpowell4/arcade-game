@@ -85,10 +85,10 @@ Player.prototype.update = function(keyCode) {
   // detect collisions
 
   for (var enemy in allEnemies) {
-    if (player.x < allEnemies[enemy].x - allEnemies[enemy].width &&
-        player.x - player.width > allEnemies[enemy].x &&
-        player.y < allEnemies[enemy].y - allEnemies[enemy].height &&
-        player.height - player.y > allEnemies[enemy].y
+    if (player.x < allEnemies[enemy].x + allEnemies[enemy].width &&
+        player.x + player.width > allEnemies[enemy].x &&
+        player.y < allEnemies[enemy].y + allEnemies[enemy].height &&
+        player.height + player.y > allEnemies[enemy].y
      )  {
     this.reset();
     }
