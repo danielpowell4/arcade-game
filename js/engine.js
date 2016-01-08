@@ -15,7 +15,7 @@ var Engine = (function(global) {
     canvas.right = 400;
     canvas.bottom = 400;
     canvas.left = 0;
-    
+
     doc.body.appendChild(canvas);
 
     /* This function serves as the kickoff point for the game loop itself
@@ -160,7 +160,8 @@ var Engine = (function(global) {
         'images/water-block.png',
         'images/grass-block.png',
         'images/enemy-bug.png',
-        'images/char-boy.png'
+        'images/char-boy.png',
+        'images/char-princess-girl.png'
     ]);
     Resources.onReady(init);
 

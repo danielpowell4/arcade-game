@@ -34,7 +34,7 @@ Enemy.prototype.reset = function () {
 };
 
 var Player = function(startX, startY) {
-    this.sprite = 'images/char-boy.png';
+    this.sprite = 'images/char-princess-girl.png';
     this.height = 76;
     this.width = 70;
     this.posStartY = 395;
