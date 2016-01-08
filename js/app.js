@@ -37,7 +37,7 @@ var Player = function(startX, startY) {
     this.height = 76;
     this.width = 70;
     this.x = 202;
-    this.y = 415;
+    this.y = 385;
 };
 
 Player.prototype.render = function () {
