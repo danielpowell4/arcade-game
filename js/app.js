@@ -1,12 +1,9 @@
-//Globally needed variables
-
-var EnemyStartPositionX = -101;
-
 // Enemies the player must avoid
 var Enemy = function(startX, startY) {
     this.sprite = 'images/enemy-bug.png';
     this.height = 67;
     this.width = 75;
+    this.enemyStartX = -101;
     this.x = startX;
     this.y = startY;
     this.speed = Math.floor((Math.random() * 100) + 200); // speed  between 100 and 300
@@ -27,10 +24,10 @@ Enemy.prototype.render = function() {
 };
 
 Enemy.prototype.reset = function () {
-  this.x = EnemyStartPositionX;
+  this.x = Enemy.enemyStartX;
   this.yPositions = [61, 144, 226, 312];
   this.y = this.yPositions[Math.floor(Math.random() * this.yPositions.length)];
-  this.speed = Math.floor((Math.random() * 100) + 100);
+  this.speed = Math.floor((Math.random() * 132) + 132);
 };
 
 var Player = function(startX, startY) {
@@ -111,7 +108,7 @@ var allEnemies = [];
 
 for (i = 0; i < 6; i++) {
   var startY = Math.floor(Math.random() * 400)
-  allEnemies.push(new Enemy(EnemyStartPositionX, startY));
+  allEnemies.push(new Enemy(Enemy.enemyStartX, startY));
 }
 
 // and the player
