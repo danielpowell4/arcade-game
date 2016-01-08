@@ -3,6 +3,7 @@ var Enemy = function(startX, startY) {
     this.sprite = 'images/enemy-bug.png';
     this.height = 67;
     this.width = 75;
+    this.startXpos = -101;
     this.x = startX;
     this.y = startY;
     this.speed = Math.floor((Math.random() * 100) + 200); // speed  between 100 and 300
@@ -23,7 +24,7 @@ Enemy.prototype.render = function() {
 };
 
 Enemy.prototype.reset = function() {
-    this.x = -101;
+    this.x = this.startXpos;
     this.yPositions = [61, 144, 226, 312];
     this.y = this.yPositions[Math.floor(Math.random() * this.yPositions.length)];
     this.speed = Math.floor((Math.random() * 132) + 132);
@@ -46,28 +47,34 @@ Player.prototype.render = function() {
 Player.prototype.update = function(keyCode) {
     var stepX = 101;
     var stepY = 83;
+    this.boundaries = {
+      top = 0;
+      right = 400;
+      bottom = 390;
+      left = 0;
+    }
 
     switch (this.action) {
         case 'up':
-            if (this.y > 0) {
+            if (this.y > this.boundaries.top) {
                 this.y -= stepY;
             }
             break;
 
         case 'right':
-            if (this.x < 400) {
+            if (this.x < this.boundaries.right) {
                 this.x += stepX;
             }
             break;
 
         case 'down':
-            if (this.y < 390) {
+            if (this.y < this.boundaries.bottom) {
                 this.y += stepY;
             }
             break;
 
         case 'left':
-            if (this.x > 0) {
+            if (this.x > this.boundaries.left) {
                 this.x -= stepX;
             }
             break;
@@ -83,11 +90,11 @@ Player.prototype.update = function(keyCode) {
 
     // detect collisions
 
-    for (var enemy in allEnemies) {
-        if (player.x < allEnemies[enemy].x + allEnemies[enemy].width &&
-            player.x + player.width > allEnemies[enemy].x &&
-            player.y < allEnemies[enemy].y + allEnemies[enemy].height &&
-            player.height + player.y > allEnemies[enemy].y
+    allEnemies.forEach(function(enemy) {
+        if (this.x < allEnemies[enemy].x + allEnemies[enemy].width &&
+            this.x + this.width > allEnemies[enemy].x &&
+            this.y < allEnemies[enemy].y + allEnemies[enemy].height &&
+            this.height + this.y > allEnemies[enemy].y
         ) {
             this.reset();
         }
@@ -108,7 +115,7 @@ var allEnemies = [];
 
 for (i = 0; i < 6; i++) {
     var startY = Math.floor(Math.random() * 250) + 61;
-    allEnemies.push(new Enemy(-101, startY));
+    allEnemies.push(new Enemy(this.startXpos, startY));
 }
 
 // Have the Playter begin their quest
