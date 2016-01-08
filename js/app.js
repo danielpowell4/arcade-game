@@ -30,7 +30,7 @@ Enemy.prototype.reset = function () {
   this.x = EnemyStartPositionX;
   this.yPositions = [61, 144, 226, 312];
   this.y = this.yPositions[Math.floor(Math.random() * this.yPositions.length)];
-  this.speed = Math.floor((Math.random() * 70) + 100);
+  this.speed = Math.floor((Math.random() * 100) + 100);
 };
 
 var Player = function(startX, startY) {
