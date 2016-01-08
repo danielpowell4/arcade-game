@@ -98,8 +98,7 @@ Player.prototype.update = function(keyCode) {
         ) {
             this.reset();
         }
-    }
-};
+    });
 
 Player.prototype.handleInput = function(e) {
     this.action = e;
