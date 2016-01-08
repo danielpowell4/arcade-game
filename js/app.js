@@ -106,7 +106,7 @@ Player.prototype.reset = function() {
 var allEnemies = [];
 
 for (i = 0; i < 6; i++) {
-  var startY = Math.floor(Math.random() * 400)
+  var startY = Math.floor(Math.random() * 250) + 61;
   allEnemies.push(new Enemy(-101, startY));
 }
 
