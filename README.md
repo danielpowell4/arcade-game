@@ -7,6 +7,10 @@ Unfortunately, there is no boat. Thus she is driven to bring strands of grass in
 
 This small game was built in javascript leveraging a simple HTML5 canvas.
 
+Play it here
+==============================
+(http://danielpowell4.github.io/arcade-game/)
+
 app.js
 ==============================
 
