@@ -52,7 +52,7 @@ Player.prototype.update = function(keyCode) {
       "right" : 400,
       "bottom" : 390,
       "left" : 0,
-    }
+    };
 
     switch (this.action) {
         case 'up':
@@ -99,6 +99,7 @@ Player.prototype.update = function(keyCode) {
             this.reset();
         }
     });
+}
 
 Player.prototype.handleInput = function(e) {
     this.action = e;
