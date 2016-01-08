@@ -24,7 +24,7 @@ Enemy.prototype.render = function() {
 };
 
 Enemy.prototype.reset = function () {
-  this.x = Enemy.enemyStartX;
+  this.x = this.enemyStartX;
   this.yPositions = [61, 144, 226, 312];
   this.y = this.yPositions[Math.floor(Math.random() * this.yPositions.length)];
   this.speed = Math.floor((Math.random() * 132) + 132);
