@@ -64,7 +64,7 @@ Player.prototype.update = function(keyCode) {
       break;
 
     case 'down':
-      if (this.y < 400) {
+      if (this.y < 390) {
         this.y += stepY;
       }
       break;
