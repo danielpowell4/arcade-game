@@ -11,6 +11,10 @@ Play it here
 ==============================
 http://danielpowell4.github.io/arcade-game/
 
+1) Use arrows in keypad to move protagonist.
+2) Avoid the bugs.
+3) Aim for the Water.
+
 app.js
 ==============================
 
