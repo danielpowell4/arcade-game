@@ -98,9 +98,6 @@ Player.prototype.update = function(keyCode) {
             this.height + this.y > allEnemies[enemy].y
         ) {
             this.reset();
-            console.log("player.x " + player.x);
-            console.log("this.x " + this.x);
-            console.log("allEnemies[enemy] " + allEnemies[enemy].x);
         }
     }
 };
