@@ -100,17 +100,6 @@ Player.prototype.update = function(keyCode) {
     }
 };
 
-  //  allEnemies.forEach(function(enemy) {
-  //      if (player.x < allEnemies[enemy].x + allEnemies[enemy].width &&
-  //          player.x + player.width > allEnemies[enemy].x &&
-  //          player.y < allEnemies[enemy].y + allEnemies[enemy].height &&
-  //          player.height + player.y > allEnemies[enemy].y
-  //      ) {
-  //          this.reset();
-  //      }
-  //  });
-// };
-
 Player.prototype.handleInput = function(e) {
     this.action = e;
 };
