@@ -89,7 +89,7 @@ Player.prototype.update = function(keyCode) {
     }
 
     // detect collisions
-
+    
     allEnemies.forEach(function(enemy) {
         if (player.x < allEnemies[enemy].x + allEnemies[enemy].width &&
             player.x + player.width > allEnemies[enemy].x &&
