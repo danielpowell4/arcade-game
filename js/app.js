@@ -38,6 +38,12 @@ var Player = function(startX, startY) {
     this.posStartY = 395;
     this.x = 202;
     this.y = this.posStartY;
+    this.boundaries = {
+      "top" : 0,
+      "right" : 400,
+      "bottom" : 390,
+      "left" : 0,
+    };
 };
 
 Player.prototype.render = function() {
@@ -47,17 +53,8 @@ Player.prototype.render = function() {
 Player.prototype.update = function(keyCode) {
     var stepX = 101;
     var stepY = 83;
-    this.boundaries = {
-      "top" : 0,
-      "right" : 400,
-      "bottom" : 390,
-      "left" : 0,
-    };
-
-    console.log("log 1 " + this.boundaries);
 
     switch (this.action) {
-        console.log("log 2 " + this.boundaries);
         case 'up':
             if (this.y > this.boundaries.top) {
                 this.y -= stepY;
