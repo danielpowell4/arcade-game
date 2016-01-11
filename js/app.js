@@ -114,7 +114,7 @@ var allEnemies = [];
 
 for (i = 0; i < 6; i++) {
     var startY = Math.floor(Math.random() * 250) + 61;
-    allEnemies.push(new Enemy(this.startXpos, startY));
+    allEnemies.push(new Enemy(Enemy.startXpos, startY));
 }
 
 // Have the Playter begin their quest
