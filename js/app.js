@@ -1,3 +1,9 @@
+// superClasses
+
+var draw = function() {
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+};
+
 // Enemies the player must avoid
 var Enemy = function(startX, startY) {
     this.sprite = 'images/enemy-bug.png';
@@ -19,9 +25,7 @@ Enemy.prototype.update = function(dt) {
 
 };
 
-Enemy.prototype.render = function() {
-    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-};
+Enemy.prototype.render = draw;
 
 Enemy.prototype.reset = function() {
     this.x = this.startXpos;
@@ -46,9 +50,7 @@ var Player = function(startX, startY) {
     };
 };
 
-Player.prototype.render = function() {
-    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-};
+Player.prototype.render = draw;
 
 Player.prototype.update = function(keyCode) {
     var stepX = 101;
@@ -96,6 +98,9 @@ Player.prototype.update = function(keyCode) {
             player.height + player.y > allEnemies[enemy].y
         ) {
             this.reset();
+            console.log("player.x " + player.x);
+            console.log("this.x " + this.x);
+            console.log("allEnemies[enemy] " + allEnemies[enemy].x);
         }
     }
 };
