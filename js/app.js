@@ -54,7 +54,10 @@ Player.prototype.update = function(keyCode) {
       "left" : 0,
     };
 
+    console.log("log 1 " + this.boundaries);
+
     switch (this.action) {
+        console.log("log 2 " + this.boundaries);
         case 'up':
             if (this.y > this.boundaries.top) {
                 this.y -= stepY;
